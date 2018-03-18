@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head  th:fragment="head">
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">-->
+    <!--&lt;!&ndash; Optional theme &ndash;&gt;-->
+    <!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">-->
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap-theme.min.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.map">
+    <link  rel="stylesheet" type="text/css" th:href="@{/css/demospringmvc2.css}">
+    <link rel="stylesheet" th:href="@{/css/admin.css}">
+
+</head>
+<body>
+<nav th:fragment="nav"  class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" th:href="@{/homelanding}">Home</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li id="li-home"><a th:href="@{/}">Product</a></li>
+            <li id="li-admin"><a th:href="@{/admin}">Admin</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page
+                    <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a th:href="@{/?pageSize=10&pageNumber=1}">Page 1</a></li>
+                    <li><a th:href="@{/?pageSize=10&pageNumber=2}">Page 2</a></li>
+                    <li><a th:href="@{/?pageSize=10&pageNumber=3}">Page 3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<footer th:fragment="footer">
+    <div class="footer-inner-top">
+        <div class="row">
+            <div class="col-sm-3">
+                <p><a href="">About us</a></p>
+                <p><a href="">Blog</a></p>
+            </div>
+            <div class="col-sm-3">
+                <p><a href="">Product for Mac</a></p>
+                <p><a href="">Product for Window</a></p>
+            </div>
+            <div class="col-sm-3">
+                <p><a href="">Web analytics</a></p>
+                <p><a href="">Presentations</a></p>
+            </div>
+            <div class="col-sm-3">
+                <p><a href="">Product Help</a></p>
+                <p><a href="">Developer API</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-inner-bottom">
+        <div class="row">
+            <div class="col-sm-4">
+                <p><a href="">@2013 Company Name</a></p>
+            </div>
+            <div class="col-sm-4">
+                <p><a href="">Term of Service</a></p>
+            </div>
+            <div class="col-sm-4">
+                <p><a href="">Privacy</a></p>
+            </div>
+        </div>
+    </div>
+
+</footer>
+<div th:fragment="script">
+<script type="text/javascript" th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+
+<script th:src="@{js/admin.js}"></script>
+</div>
+</body>
+</html>

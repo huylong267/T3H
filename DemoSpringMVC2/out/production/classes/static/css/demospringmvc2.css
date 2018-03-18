@@ -1,0 +1,45 @@
+.container-fluid{
+    background: black;
+}
+
+
+.wrapper{
+    margin:  0px auto;
+    max-width: 900px;
+}
+.alert-warning{
+    float: left;
+    width: 30%;
+}
+
+
+.panel-product-img img{
+    width: 100%;
+}
+.panel-product-text-title h4{
+    font-weight: bold;
+    text-align: center;
+}
+.panel-product-text-content p {
+    text-align: center;
+    color: red;
+}
+.btn-addtocart{
+    text-align: center;
+    margin: 10px 50px;
+    background: green;
+    padding: 5px;
+    border-radius: 5px;
+
+
+}
+
+
+.footer-inner-top{
+    margin: 5px 20px;
+    text-align: center;
+}
+.footer-inner-bottom{
+   font-size: 10pt;
+    margin:50px 100px;
+}

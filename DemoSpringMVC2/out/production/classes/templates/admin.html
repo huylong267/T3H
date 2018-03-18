@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/layout::head">
+</head>
+<body>
+    <nav th:replace="fragments/layout::nav"></nav>
+
+
+    <div class="wrapper"  style="max-width: 900px;margin: 0px auto">
+    <div class="container">
+    <h2>Admin - Product pages</h2>
+    <div style="border: 1px solid red ; background: green ;color:white;padding:5px" class="khung-text">
+       <span th:text="${massage}"></span>
+    </div>
+     <p style="margin-top: 10px;">
+        <button class="btn btn-primary" data-toggle="modal" data-target="#modal-create-product">
+            Insert new product
+        </button>
+     </p>
+    <a style="margin-top: 10px  ; border: 1px solid transparent; padding: 5px; border-radius: 4px 4px; background: blue ;
+		color: white" th:href="@{/}">Back to index</a>
+    </div>
+
+        <div id="modal-create-product" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Create new product</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="img-select-block margin-bottom-15">
+                            <label>Product image</label><br/>
+                            <img id="preview-product-img" th:src="@{/img/default.png}">
+                            <input type="file" id="input-select-img-product">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    <footer th:replace="fragments/layout::footer"></footer>
+    </div>
+    <!--<div th:replace="fragments/layout::script"></div>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.9.0/sweetalert2.all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/locale/vi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+    <script th:src="@{js/admin.js}"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/layout::head">
+</head>
+<body>
+<nav th:replace="fragments/layout::nav"></nav>
+<div class="wrapper">
+    <div class="productpage" id="home">
+        <div class="container">
+            <h3>Demo Product List</h3>
+        </div>
+
+
+        <div class="panel panel-success">
+            <div class="panel-heading">Information paging</div>
+            <div class="panel-body">
+                <div class="label label-warning">
+                    total product<span th:text="${pagingableItem.getTotalProducts()}"></span>
+                </div>
+                <div class="label label-warning">
+                    Page Size now <span th:text="${pagingableItem.getPageSize()}"></span>
+                </div>
+                <div class="label label-warning">
+                    Page Number Now <span th:text="${pagingableItem.getPageNumber()}"></span>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-success" th:fragment="product">
+            <div class="panel-heading">List Product</div>
+
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-3 col-sm-3" th:each="product:${pagingableItem.getListData()}">
+                        <div class="thumbnail">
+                        <div class="panel-product">
+                            <div class="panel-product-img">
+                                <img th:src="${product.getImage()}" alt="">
+                            </div>
+                            <div class="panel-product-text">
+                                <div class="panel-product-text-title">
+                                    <h4 th:text="${product.getName()}"></h4>
+                                </div>
+                                <div class="panel-product-text-content">
+                                    <p th:text="${product.getshort_desc()}"></p>
+                                </div>
+                                <button class="btn-addtocart">Add to cart</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer th:replace="fragments/layout::footer">
+</footer>
+
+</div>
+<div th:replace="fragments/layout::script"></div>
+</body>
+</html>
