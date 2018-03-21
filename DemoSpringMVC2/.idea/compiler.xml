@@ -4,6 +4,8 @@
     <bytecodeTargetLevel>
       <module name="DemoSpringMVC2_main" target="1.8" />
       <module name="DemoSpringMVC2_test" target="1.8" />
+      <module name="T3H-DemoSpringMVC2_main" target="1.8" />
+      <module name="T3H-DemoSpringMVC2_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

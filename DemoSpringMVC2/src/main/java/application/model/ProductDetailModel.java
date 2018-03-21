@@ -1,17 +1,22 @@
 package application.model;
 
-import application.extension.CustomDateDeserializer;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+
+import application.extension.CustomDateSerializer;
+
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 import java.util.Date;
 
-public class ProductDataModel {
-    private String name;
-    private String image;
-    private  String short_desc;
+public class ProductDetailModel {
+    private  int id;
 
-    @JsonDeserialize(using = CustomDateDeserializer.class)
-    private Date createdDate;
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -44,4 +49,11 @@ public class ProductDataModel {
     public void setCreatedDate(Date createdDate) {
         this.createdDate = createdDate;
     }
+
+    private String name;
+    private String image;
+    private  String short_desc;
+
+    @JsonSerialize(using = CustomDateSerializer.class)
+    private Date createdDate;
 }

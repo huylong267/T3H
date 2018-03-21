@@ -9,5 +9,8 @@ import java.util.List;
 public interface ProductRepository extends JpaRepository<Product ,Integer> {
     @Query("select  count(p.id) from tbl_product p")
     long getTotalProducts();
+    List<Product> findByNameContaining(String name);
+
+
 
 }

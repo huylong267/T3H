@@ -19,6 +19,22 @@ public class ProductService {
     private ProductRepository productRepository;
 
 
+   public boolean update(Product product){
+       try {
+           productRepository.save(product);
+           return true;
+       }catch (Exception e){
+            e.getMessage();
+       }
+       return false;
+   }
+
+    public Product findOne(int id){
+        return  productRepository.findOne(id);
+    }
+    public List<Product> searchName(String name){
+        return productRepository.findByNameContaining(name);
+    }
 
     public  void  addNewProduct(Product product){
         productRepository.save(product);

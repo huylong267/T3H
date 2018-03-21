@@ -5,6 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/DemoSpringMVC2.iml" filepath="$PROJECT_DIR$/.idea/modules/DemoSpringMVC2.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/DemoSpringMVC2_main.iml" filepath="$PROJECT_DIR$/.idea/modules/DemoSpringMVC2_main.iml" group="DemoSpringMVC2" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/DemoSpringMVC2_test.iml" filepath="$PROJECT_DIR$/.idea/modules/DemoSpringMVC2_test.iml" group="DemoSpringMVC2" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/T3H-DemoSpringMVC2.iml" filepath="$PROJECT_DIR$/.idea/modules/T3H-DemoSpringMVC2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/T3H-DemoSpringMVC2_main.iml" filepath="$PROJECT_DIR$/.idea/modules/T3H-DemoSpringMVC2_main.iml" group="DemoSpringMVC2" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/T3H-DemoSpringMVC2_test.iml" filepath="$PROJECT_DIR$/.idea/modules/T3H-DemoSpringMVC2_test.iml" group="DemoSpringMVC2" />
     </modules>
   </component>
 </project>
